@@ -57,6 +57,11 @@ runBenchmark("network-simplex ranker", function() {
   rank(g);
 });
 
+runBenchmark("topo-sort ranker", function() {
+  g.graph().ranker = "topo-sort";
+  rank(g);
+});
+
 runBenchmark("layout", function() {
   delete g.graph().ranker;
   layout(g);
